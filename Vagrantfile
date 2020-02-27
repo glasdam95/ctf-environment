@@ -1,12 +1,11 @@
-#!/bin/bash
+Vagrant.configure("2") do |config|
 
-export WORKON_HOME=~/.virtualenvs
-source ~/.bashrc
-echo -e "\e[33mDone Export"
+  config.vm.define "kali" do |kali|
+    kali.vm.box = "elrey741/kali-linux_amd64"
+    kali.vm.hostname = "kali"
+    kali.vm.network :private_network, ip: "192.168.0.80"
+    kali.vm.synced_folder "./", "/home/vagrant/common/"
+    kali.vm.provision "shell", path: "init_kali.sh"
+  end            
 
-git clone https://github.com/zardus/ctf-tools.git
-./ctf-tools/bin/manage-tools setup
-echo -e "\e[33mDone git clone and setup"
-
-source ~/.bashrc
-workon ctftools
+end
