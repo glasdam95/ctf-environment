@@ -1,7 +1,7 @@
-# Ctf-environment
+# CTF-Environment
 Setup a virtual environment for solving hacking exercises/challenges.
 
-# Install Vagrant and virtualbox
+# Install Vagrant and Virtualbox
 asdasada
 
 asdasdasd
