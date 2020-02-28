@@ -11,5 +11,7 @@ git clone https://github.com/zardus/ctf-tools.git
 ./ctf-tools/bin/manage-tools setup
 echo -e "\e[33mDone git clone and setup"
 
+
+// Remove it from here and add to the description.
 source .bashrc
 workon ctftools
